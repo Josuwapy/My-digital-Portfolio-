@@ -1,4 +1,11 @@
 import { Project, PythonCodePreset, SkillCategory } from '../types';
+import schoolBillingImg from '../assets/images/school_billing_system_1793243886521.jpg';
+import mobileSpaceArcadeImg from '../assets/images/mobile_space_arcade_1793243886797.jpg';
+import facultyEvalImg from '../assets/images/faculty_eval_mockup_1793244976470.jpg';
+import feedbackSystemImg from '../assets/images/feedback_system_hero_1791941188202.jpg';
+import developerWorkspaceImg from '../assets/images/developer_workspace_1791941188781.jpg';
+import campusLabPortalImg from '../assets/images/campus_lab_portal_1791941189331.jpg';
+import joshuaPhoto from '../assets/images/joshua_formal_suit_1791945332404.jpg';
 
 export const PERSONAL_INFO = {
   fullName: 'Joshua Kim S. Entrina',
@@ -9,6 +16,7 @@ export const PERSONAL_INFO = {
   institution: 'Torres Capitol College',
   schoolWebsite: 'https://philcountryville.com',
   location: 'Northern Mindanao, Philippines',
+  photo: joshuaPhoto,
   bio: 'A passionate 2nd-year BSIT student at Torres Capitol College (Section 2A) dedicated to mastering Python development, software engineering, and responsive web systems. Eager to transform academic principles into real, high-impact digital solutions that streamline campus workflows and solve practical challenges.',
   careerGoal: 'Aspiring Full-Stack Software Engineer & Python Specialist focusing on data-driven web applications and clean human-centered interfaces.',
   contacts: {
@@ -48,7 +56,7 @@ export const PROJECTS: Project[] = [
     tagline: 'Official BSIT Capstone Title: Student tuition assessment & installment ledger',
     category: 'Campus System',
     year: '2024 - 2025',
-    image: '/src/assets/images/school_billing_system_1793243886521.jpg',
+    image: schoolBillingImg,
     summary: 'The official Capstone Project developed for Torres Capitol College. Streamlines college tuition fee assessments per enrolled academic unit, manages semestral installment schedules (Prelim, Midterm, Semi-Final, Final), tracks student accounts, and automates official receipt (OR) generation.',
     features: [
       'Automated tuition assessment engine computing base lecture units and laboratory fees',
@@ -76,7 +84,7 @@ export const PROJECTS: Project[] = [
     tagline: '2D retro space shooter developed with Pygame on Pydroid 3 (Android)',
     category: 'Game Development',
     year: '2024',
-    image: '/src/assets/images/mobile_space_arcade_1793243886797.jpg',
+    image: mobileSpaceArcadeImg,
     summary: 'An action-packed retro 2D space arcade shooter crafted entirely in Python using Pygame and developed natively on a smartphone via Pydroid 3. Features responsive multi-touch and keyboard controls, procedural waves of cosmic asteroids, hostile alien interceptors, particle thrusters, laser combat, and dynamic high-score tracking.',
     features: [
       '60 FPS game loop optimized for mobile hardware and touch inputs on Pydroid 3',
@@ -105,7 +113,7 @@ export const PROJECTS: Project[] = [
     tagline: 'Future BSIT Capstone Title: Dual-Platform (Smartphone & Desktop) Academic Appraisal Portal',
     category: 'Campus System',
     year: 'Upcoming 2025 - 2026',
-    image: '/src/assets/images/faculty_eval_mockup_1793244976470.jpg',
+    image: facultyEvalImg,
     summary: 'Joshua\'s upcoming official BSIT Capstone project planned for Torres Capitol College. Conceived and architected to be 100% responsive across both smartphones (touch-first mobile web survey for students) and Windows desktop workstations (dean & faculty performance analytics). Automates anonymous student appraisals, computes CHED NBC 461 weighted scores, and provides real-time academic sentiment intelligence.',
     features: [
       'Dual-viewport architecture: 100% responsive for smartphones (touch-first) and desktop workstations',
@@ -134,7 +142,7 @@ export const PROJECTS: Project[] = [
     tagline: 'Faculty evaluation and student sentiment analysis portal',
     category: 'Full-Stack',
     year: '2024 - 2025',
-    image: '/src/assets/images/feedback_system_hero_1791941188202.jpg',
+    image: feedbackSystemImg,
     summary: 'A web-based academic appraisal and student feedback portal designed for Torres Capitol College to modernize course evaluations. Automates anonymous student submissions, computes weighted faculty ratings across pedagogy criteria, and generates actionable summary reports for department heads.',
     features: [
       'Anonymous and authenticated student review submission pipeline',
@@ -162,7 +170,7 @@ export const PROJECTS: Project[] = [
     tagline: 'High-performance interactive showcase with embedded code executor',
     category: 'Python & Backend',
     year: '2025',
-    image: '/src/assets/images/developer_workspace_1791941188781.jpg',
+    image: developerWorkspaceImg,
     summary: 'Joshua\'s personal digital portfolio built to showcase academic milestones at Torres Capitol College, technical capabilities in Python, and front-end interface craftsmanship. Features an interactive in-browser Python terminal, live project simulations, and accessible resume exporting.',
     features: [
       'Interactive in-browser Python sandbox running authentic scripts',
@@ -190,7 +198,7 @@ export const PROJECTS: Project[] = [
     tagline: 'Laboratory seat reservation and computer equipment tracking',
     category: 'Campus System',
     year: '2024',
-    image: '/src/assets/images/campus_lab_portal_1791941189331.jpg',
+    image: campusLabPortalImg,
     summary: 'A computer lab resource coordinator conceived for Torres Capitol College BSIT department. Students and faculty can view real-time workstation availability, reserve seats for programming laboratory exercises, and log hardware maintenance tickets.',
     features: [
       'Interactive visual laboratory grid displaying workstation states (Available, In Use, Maintenance)',
@@ -218,7 +226,7 @@ export const PROJECTS: Project[] = [
     tagline: 'Local community resident profiling and certification dispatch',
     category: 'Campus System',
     year: '2024',
-    image: '/src/assets/images/developer_workspace_1791941188781.jpg',
+    image: developerWorkspaceImg,
     summary: 'A practical database management application for local Philippine barangay offices. Digitizes resident census records, automates certificate issuance (Barangay Clearance, Certificate of Residency, Indigency), and generates monthly demographic statistics.',
     features: [
       'Resident census catalog with filterable Purok, age, and voter status indices',

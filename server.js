@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
 const distPath = path.join(__dirname, 'dist');
+const srcImagesPath = path.join(__dirname, 'src', 'assets', 'images');
+const publicImagesPath = path.join(__dirname, 'public', 'assets', 'images');
 
 // Ensure dist directory exists
 if (!fs.existsSync(distPath)) {
@@ -30,7 +32,7 @@ app.get('/healthz', (req, res) => {
   res.status(200).json({ status: 'ok', uptime: process.uptime() });
 });
 
-// Serve static assets from dist
+// Primary static file handler for Vite production bundle
 app.use(express.static(distPath, {
   maxAge: '1d',
   setHeaders: (res, filePath) => {
@@ -41,7 +43,36 @@ app.use(express.static(distPath, {
   }
 }));
 
-// SPA Fallback: send index.html for any unknown route
+// Redundancy fallbacks: Direct image routing for any legacy relative links
+if (fs.existsSync(srcImagesPath)) {
+  app.use('/src/assets/images', express.static(srcImagesPath, { maxAge: '7d' }));
+  app.use('/assets/images', express.static(srcImagesPath, { maxAge: '7d' }));
+}
+if (fs.existsSync(publicImagesPath)) {
+  app.use('/images', express.static(publicImagesPath, { maxAge: '7d' }));
+}
+
+// Dedicated profile image shortcut
+app.get(['/profile.jpg', '/profile-photo.jpg'], (req, res) => {
+  const candidates = [
+    path.join(distPath, 'assets', 'images', 'joshua_formal_suit_1791945332404.jpg'),
+    path.join(srcImagesPath, 'joshua_formal_suit_1791945332404.jpg'),
+    path.join(distPath, 'src', 'assets', 'images', 'joshua_formal_suit_1791945332404.jpg'),
+  ];
+  for (const file of candidates) {
+    if (fs.existsSync(file)) {
+      return res.sendFile(file);
+    }
+  }
+  res.status(404).send('Profile image not found');
+});
+
+// Prevent returning HTML index fallback for missing assets with file extensions
+app.get(/\.(jpg|jpeg|png|gif|webp|svg|ico|css|js|map|woff|woff2|ttf)$/i, (req, res) => {
+  res.status(404).send('Static asset not found');
+});
+
+// SPA Fallback: send index.html for application routes
 app.get('*', (req, res) => {
   const indexPath = path.join(distPath, 'index.html');
   if (fs.existsSync(indexPath)) {

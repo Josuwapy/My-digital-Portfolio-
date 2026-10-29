@@ -87,7 +87,7 @@ export const Projects: React.FC = () => {
             <div className="lg:col-span-8 group relative rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400/60 transition-all overflow-hidden flex flex-col justify-between shadow-xl">
               <div className="aspect-[16/9] w-full overflow-hidden bg-slate-950 relative border-b border-slate-800">
                 <img
-                  src="/src/assets/images/school_billing_system_1793243886521.jpg"
+                  src={billingProject.image}
                   alt="School Billing System Capstone Interface"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
@@ -191,7 +191,7 @@ export const Projects: React.FC = () => {
             <div className="lg:col-span-4 group relative rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 transition-all overflow-hidden flex flex-col justify-between shadow-lg">
               <div className="aspect-[4/3] w-full overflow-hidden bg-slate-950 relative border-b border-slate-800">
                 <img
-                  src="/src/assets/images/mobile_space_arcade_1793243886797.jpg"
+                  src={arcadeProject.image}
                   alt="Mobile Space Arcade Pygame on Pydroid 3"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
@@ -263,7 +263,7 @@ export const Projects: React.FC = () => {
             <div className="lg:col-span-8 group relative rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400/60 transition-all overflow-hidden flex flex-col justify-between shadow-xl">
               <div className="aspect-[16/9] w-full overflow-hidden bg-slate-950 relative border-b border-slate-800">
                 <img
-                  src="/src/assets/images/faculty_eval_mockup_1793244976470.jpg"
+                  src={facultyProject.image}
                   alt="Faculty Evaluation System Dual-Device Architecture"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
@@ -375,7 +375,7 @@ export const Projects: React.FC = () => {
             <div className="lg:col-span-6 group relative rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-slate-700/80 transition-all overflow-hidden flex flex-col justify-between shadow-lg">
               <div className="aspect-[16/10] w-full overflow-hidden bg-slate-950 relative border-b border-slate-800">
                 <img
-                  src="/src/assets/images/feedback_system_hero_1791941188202.jpg"
+                  src={feedbackProject.image}
                   alt="Student Feedback System"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
@@ -446,7 +446,7 @@ export const Projects: React.FC = () => {
             <div className="lg:col-span-6 group relative rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-slate-700/80 transition-all overflow-hidden flex flex-col justify-between shadow-lg">
               <div className="aspect-[16/10] w-full overflow-hidden bg-slate-950 relative border-b border-slate-800">
                 <img
-                  src="/src/assets/images/developer_workspace_1791941188781.jpg"
+                  src={portfolioProject.image}
                   alt="Digital Portfolio Developer Setup"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
@@ -505,7 +505,7 @@ export const Projects: React.FC = () => {
             <div className="lg:col-span-6 group relative rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-slate-700/80 transition-all overflow-hidden flex flex-col justify-between shadow-lg">
               <div className="aspect-[16/10] w-full overflow-hidden bg-slate-950 relative border-b border-slate-800">
                 <img
-                  src="/src/assets/images/campus_lab_portal_1791941189331.jpg"
+                  src={labProject.image}
                   alt="Torres Capitol IT Lab Workstation Portal"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"

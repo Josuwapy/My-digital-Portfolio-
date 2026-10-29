@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ArrowDown, Code, Github, Mail, Facebook, Instagram, ExternalLink, Terminal, Sparkles, Upload, Camera, RefreshCw } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import joshuaFormalSuitPhoto from '../assets/images/joshua_formal_suit_1791945332404.jpg';
 
 interface HeroProps {
   onOpenTerminal: () => void;
@@ -8,9 +9,20 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
-  const DEFAULT_PHOTO = '/src/assets/images/joshua_formal_suit_1791945332404.jpg';
+  const DEFAULT_PHOTO = joshuaFormalSuitPhoto;
   const [profileImg, setProfileImg] = useState<string>(() => {
-    return localStorage.getItem('joshua_custom_profile') || DEFAULT_PHOTO;
+    try {
+      const saved = localStorage.getItem('joshua_custom_profile');
+      if (saved && saved.startsWith('data:image')) {
+        return saved;
+      }
+      if (saved) {
+        localStorage.removeItem('joshua_custom_profile');
+      }
+    } catch {
+      // ignore
+    }
+    return DEFAULT_PHOTO;
   });
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -165,9 +177,21 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
               {/* Photo Frame */}
               <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-slate-800 border border-slate-700/60 group">
                 <img
-                  src={profileImg}
+                  src={profileImg || DEFAULT_PHOTO}
                   alt="Joshua Kim S. Entrina - BSIT 2nd Year Student at Torres Capitol College"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== DEFAULT_PHOTO) {
+                      target.src = DEFAULT_PHOTO;
+                      setProfileImg(DEFAULT_PHOTO);
+                      try {
+                        localStorage.removeItem('joshua_custom_profile');
+                      } catch {
+                        // ignore
+                      }
+                    }
+                  }}
                   className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
                 />
 
