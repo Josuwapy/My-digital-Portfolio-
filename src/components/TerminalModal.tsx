@@ -44,12 +44,53 @@ Connected to: Josuwapy@TorresCapitolCollege (Section 2A)`,
   help        - Show this reference menu
   whoami      - Print developer identity & college section
   school      - Information about Torres Capitol College & Section 2A
+  capstone    - Details on School Billing System (BSIT Capstone)
+  faculty     - Details on Faculty Evaluation System (Upcoming Capstone)
+  arcade      - Details on Mobile Space Arcade (Pygame/Pydroid 3)
   projects    - List developed software systems & tech stacks
   skills      - List programming languages & technical toolkits
   contacts    - Print direct emails and social profiles
-  python eval - Execute quick Python Student Feedback calculation
+  python eval - Execute quick Python Faculty Evaluation calculation
   clear       - Clear terminal history
   exit        - Close interactive terminal`;
+        break;
+
+      case 'faculty':
+      case 'evaluation':
+        output = `[Upcoming BSIT Capstone Title: Faculty Evaluation System]
+Institution : Torres Capitol College (philcountryville.com)
+Proponent   : Joshua Kim S. Entrina (BSIT Section 2A)
+Status      : Upcoming Capstone (In Architecture & Conceptual Design)
+Platforms   : 100% Responsive for Smartphones (Touch-First PWA) & Windows PCs (Dean Dashboard)
+Core Tech   : Python (FastAPI/Django), React 19, Tailwind CSS, PostgreSQL/SQLite
+Key Features:
+ • Cryptographic single-use SHA-256 tokens ensuring total student ballot privacy
+ • CHED NBC 461 pedagogical evaluation criteria (Commitment, Knowledge, Independent Learning, Management)
+ • Real-time weighted mean scoring & adjectival categorization (Outstanding to Poor)
+ • Dean & Department Head analytics dashboard with automated PDF dossiers`;
+        break;
+
+      case 'capstone':
+      case 'billing':
+        output = `[BSIT Official Capstone Title: School Billing System]
+Institution : Torres Capitol College (philcountryville.com)
+Developer   : Joshua Kim S. Entrina (BSIT Section 2A)
+Architecture: Python + Flask/Django, SQLite Double-Entry Ledger, ReportLab
+Key Modules :
+ • Enrolled unit tuition matrix assessment (PHP 420.00/unit)
+ • 4-term semestral installment schedule (Prelim, Midterm, Semi-Final, Final)
+ • Instant Official Receipt (OR) generation under 1.2s
+ • Scholarship voucher discount calculations (Dean's List / Grants)`;
+        break;
+
+      case 'arcade':
+      case 'game':
+        output = `[Mobile Space Arcade: 2D Retro Space Shooter]
+Platform    : Android (Developed natively on smartphone via Pydroid 3)
+Engine      : Python 3 + Pygame 2.5
+Performance : 60 FPS Game Loop with double buffering
+Controls    : Multi-Touch On-Screen D-Pad (Mobile) + WASD/Space (PC)
+Mechanics   : Particle exhaust, asteroid field physics, alien interceptor AI, high-score memory`;
         break;
 
       case 'whoami':

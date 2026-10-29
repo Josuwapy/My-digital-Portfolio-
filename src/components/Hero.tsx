@@ -73,7 +73,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
             {/* Lead Copy */}
             <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl">
               An aspiring software engineer and 2nd-year IT student at Torres Capitol College. I focus on developing clean, practical applications—like my campus{' '}
-              <a href="#projects" className="text-emerald-400 hover:underline font-medium">Student Feedback System</a>, data scripts, and robust software tools for both smartphones and Windows environments.
+              <a href="#projects" className="text-emerald-400 hover:underline font-medium">School Billing System</a>, upcoming <a href="#projects" className="text-emerald-400 hover:underline font-medium">Faculty Evaluation System</a>, Mobile Space Arcade, and responsive software tools for both smartphones and Windows environments.
             </p>
 
             {/* Primary Action Buttons */}

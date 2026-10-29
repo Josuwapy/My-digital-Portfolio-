@@ -33,13 +33,17 @@ Current Level: 2nd Year Regular Student, Section 2A
 Dean's List Track | Relevant Coursework: Data Structures, OOP (Python), DBMS, Web Tech
 
 PROJECTS
-1. Student Feedback System - Lead Developer (Python, Flask, SQLite, Tailwind)
+1. School Billing System - Lead Capstone Developer (Python, Flask, SQLite, PDF Generator)
+   Official BSIT Capstone Title for Torres Capitol College: Student tuition assessment & installment ledger.
+2. Mobile Space Arcade - Solo Game Developer (Python 3, Pygame, Pydroid 3 Android IDE)
+   2D retro space shooter developed natively on smartphone with particle physics & 60 FPS game loop.
+3. Student Feedback System - Lead Developer (Python, Flask, SQLite, Tailwind)
    Faculty evaluation & student sentiment platform for Torres Capitol College.
-2. Torres Capitol IT Lab Workstation Portal - Full-Stack Developer (Python, SQLAlchemy, JS)
+4. Torres Capitol IT Lab Workstation Portal - Full-Stack Developer (Python, SQLAlchemy, JS)
    Computer laboratory seat booking & hardware management.
-3. Digital Portfolio & Python Sandbox - Sole Engineer (React 19, TypeScript, Tailwind)
+5. Digital Portfolio & Python Sandbox - Sole Engineer (React 19, TypeScript, Tailwind)
    Responsive portfolio with live embedded Python executor.
-4. Barangay Record & Citizen Services System (Python, SQLite, Tkinter)
+6. Barangay Record & Citizen Services System (Python, SQLite, Tkinter)
    Demographic records & official clearance generation.
 
 TECHNICAL SKILLS

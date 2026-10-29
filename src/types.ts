@@ -2,14 +2,14 @@ export interface Project {
   id: string;
   title: string;
   tagline: string;
-  category: 'Full-Stack' | 'Python & Backend' | 'Campus System';
+  category: 'Full-Stack' | 'Python & Backend' | 'Campus System' | 'Game Development';
   year: string;
   image: string;
   summary: string;
   features: string[];
   technologies: string[];
   role: string;
-  status: 'Completed' | 'Active Development' | 'Coursework Project';
+  status: 'Completed' | 'Active Development' | 'Coursework Project' | 'Upcoming Capstone';
   githubUrl?: string;
   demoAvailable?: boolean;
   metrics?: { label: string; value: string }[];
