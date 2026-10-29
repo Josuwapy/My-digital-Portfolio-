@@ -53,11 +53,15 @@ if (fs.existsSync(publicImagesPath)) {
 }
 
 // Dedicated profile image shortcut
-app.get(['/profile.jpg', '/profile-photo.jpg'], (req, res) => {
+app.get(['/profile.jpg', '/profile.png', '/juswa.jpg', '/juswa.png', '/profile-photo.jpg'], (req, res) => {
   const candidates = [
+    path.join(distPath, 'juswa.jpg'),
+    path.join(distPath, 'juswa.png'),
+    path.join(__dirname, 'public', 'juswa.jpg'),
+    path.join(srcImagesPath, 'juswa.jpg'),
+    path.join(distPath, 'assets', 'images', 'juswa.jpg'),
     path.join(distPath, 'assets', 'images', 'joshua_formal_suit_1791945332404.jpg'),
     path.join(srcImagesPath, 'joshua_formal_suit_1791945332404.jpg'),
-    path.join(distPath, 'src', 'assets', 'images', 'joshua_formal_suit_1791945332404.jpg'),
   ];
   for (const file of candidates) {
     if (fs.existsSync(file)) {

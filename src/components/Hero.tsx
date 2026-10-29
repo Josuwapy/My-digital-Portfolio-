@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ArrowDown, Code, Github, Mail, Facebook, Instagram, ExternalLink, Terminal, Sparkles, Upload, Camera, RefreshCw } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import joshuaFormalSuitPhoto from '../assets/images/joshua_formal_suit_1791945332404.jpg';
+import juswaPhoto from '../assets/images/juswa.jpg';
 
 interface HeroProps {
   onOpenTerminal: () => void;
@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
-  const DEFAULT_PHOTO = joshuaFormalSuitPhoto;
+  const DEFAULT_PHOTO = juswaPhoto;
   const [profileImg, setProfileImg] = useState<string>(() => {
     try {
       const saved = localStorage.getItem('joshua_custom_profile');

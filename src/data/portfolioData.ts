@@ -5,7 +5,7 @@ import facultyEvalImg from '../assets/images/faculty_eval_mockup_1793244976470.j
 import feedbackSystemImg from '../assets/images/feedback_system_hero_1791941188202.jpg';
 import developerWorkspaceImg from '../assets/images/developer_workspace_1791941188781.jpg';
 import campusLabPortalImg from '../assets/images/campus_lab_portal_1791941189331.jpg';
-import joshuaPhoto from '../assets/images/joshua_formal_suit_1791945332404.jpg';
+import joshuaPhoto from '../assets/images/juswa.jpg';
 
 export const PERSONAL_INFO = {
   fullName: 'Joshua Kim S. Entrina',
